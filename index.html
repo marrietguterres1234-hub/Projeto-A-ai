@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mania Açaí | O Verdadeiro Sabor Do Açaí</title>
+
+    <!-- LINK PARA O ARQUIVO CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- TAGS DE COMPARTILHAMENTO (CORREÇÃO PARA O WHATSAPP) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mania Açaí | O Verdadeiro Sabor Do Açaí">
+    <meta property="og:description" content="O melhor Açaí da zona sul. Crie a sua combinação perfeita!">
+    <!-- SUBSTITUA A URL ABAIXO PELA URL REAL DO SEU SITE HOSPEDADO -->
+    <meta property="og:image" content="https://unsplash.com">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+</head>
+
+<body>
+
+    <!-- TOPO DO SITE -->
+    <header>
+        <div class="logo">Mania <span>de Açaí</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- SEÇÃO PRINCIPAL -->
+    <section id="inicio" class="hero">
+        <h1>O melhor Açaí da zona sul</h1>
+        <p>Aqui quem manda no copo é você. Crie a sua combinação perfeita!</p>
+        <div class="acoes-hero">
+            <a href="https://wa.me/5551989639547" target="_blank" rel="noopener" class="btn-pedido">Pedir Agora</a>
+            <button type="button" class="btn-compartilhar" data-share-site>Compartilhar com clientes</button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DO CARDÁPIO -->
+    <section id="cardapio" class="cardapio">
+        <h2>Nosso Cardápio</h2>
+
+        <div class="grid-produtos">
+            <!-- Copo 1 -->
+            <div class="card-produto">
+                <img src="assets/acai-250.jpg" alt="Açaí 250ml" class="img-produto">
+                <div class="info-produto">
+                    <h3>Copo Tradicional 250ml</h3>
+                    <p>Açaí puro acompanhado de até 2 adicionais tradicionais à sua escolha.</p>
+                    <div class="preco">R$ 15,00</div>
+                    <div class="adicionais" data-copo="Copo Tradicional 250ml" data-limite="2">
+                        <p class="titulo-adicionais">Escolha até 2 adicionais</p>
+                        <div class="opcoes-adicionais">
+                            <label><input type="checkbox" value="Granola"> Granola</label>
+                            <label><input type="checkbox" value="Leite em pó"> Leite em pó</label>
+                            <label><input type="checkbox" value="Paçoca"> Paçoca</label>
+                            <label><input type="checkbox" value="Banana"> Banana</label>
+                            <label><input type="checkbox" value="Morango"> Morango</label>
+                            <label><input type="checkbox" value="Confete"> Confete</label>
+                        </div>
+                        <p class="aviso-adicionais" aria-live="polite"></p>
+                    </div>
+                    <button type="button" class="btn-pedir-copo">Pedir este copo</button>
+                </div>
+            </div>
+
+            <!-- Copo 2 -->
+            <div class="card-produto">
+                <img src="assets/acai-330.jpg" alt="Açaí 330ml" class="img-produto">
+                <div class="info-produto">
+                    <h3>Copo Galera 330ml</h3>
+                    <p>Nossa opção mais vendida! Leve até 3 adicionais e 1 cobertura inclusa.</p>
+                    <div class="preco">R$ 16,00</div>
+                    <div class="adicionais" data-copo="Copo Galera 330ml" data-limite="3">
+                        <p class="titulo-adicionais">Escolha até 3 adicionais</p>
+                        <div class="opcoes-adicionais">
+                            <label><input type="checkbox" value="Granola"> Granola</label>
+                            <label><input type="checkbox" value="Leite em pó"> Leite em pó</label>
+                            <label><input type="checkbox" value="Paçoca"> Paçoca</label>
+                            <label><input type="checkbox" value="Banana"> Banana</label>
+                            <label><input type="checkbox" value="Morango"> Morango</label>
+                            <label><input type="checkbox" value="Confete"> Confete</label>
+                        </div>
+                        <p class="aviso-adicionais" aria-live="polite"></p>
+                    </div>
+                    <button type="button" class="btn-pedir-copo">Pedir este copo</button>
+                </div>
+            </div>
+
+            <!-- Copo 3 -->
+            <div class="card-produto">
+                <img src="assets/acai-550.jpg" alt="Açaí 550ml" class="img-produto">
+                <div class="info-produto">
+                    <h3>Super Copo 550ml</h3>
+                    <p>Para quem tem muita fome. Até 4 adicionais livres e dupla cobertura.</p>
+                    <div class="preco">R$ 25,00</div>
+                    <div class="adicionais" data-copo="Super Copo 550ml" data-limite="4">
+                        <p class="titulo-adicionais">Escolha até 4 adicionais</p>
+                        <div class="opcoes-adicionais">
+                            <label><input type="checkbox" value="Granola"> Granola</label>
+                            <label><input type="checkbox" value="Leite em pó"> Leite em pó</label>
+                            <label><input type="checkbox" value="Paçoca"> Paçoca</label>
+                            <label><input type="checkbox" value="Banana"> Banana</label>
+                            <label><input type="checkbox" value="Morango"> Morango</label>
+                            <label><input type="checkbox" value="Confete"> Confete</label>
+                        </div>
+                        <p class="aviso-adicionais" aria-live="polite"></p>
+                    </div>
+                    <button type="button" class="btn-pedir-copo">Pedir este copo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ E CONTATOS -->
+    <footer id="contato">
+        <p><strong>Endereço:</strong> Rua Laranjeiras - Restinga, Porto Alegre - RS, 91790-795, Brasil</p>
+        <p><strong>Horário:</strong> Todos os dias das 14h às 22h</p>
+        <p>Dúvidas ou Pedidos? Chame no <a href="https://wa.me/5551989639547" target="_blank" rel="noopener"
+                class="whatsapp-footer">WhatsApp: (51) 9896-39547</a></p>
+        <p class="copyright">Mania de Açaí.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
