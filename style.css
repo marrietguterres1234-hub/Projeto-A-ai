@@ -1,4 +1,4 @@
-* --- CONFIGURAÇÕES GERAIS --- */
+/* --- CONFIGURAÇÕES GERAIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -242,3 +242,26 @@ footer p {
     nav a { margin: 0 10px; }
     .hero h1 { font-size: 30px; }
 }
+
+/* Ajustes de leitura, acessibilidade e telas pequenas */
+.logo span, nav a:hover, nav a.ativo, .whatsapp-footer { color: #a4f28a; }
+.btn-pedido, .btn-pedir-copo { background: #187422; color: #fff; }
+.btn-pedido:hover, .btn-pedir-copo:hover { background: #125819; }
+.info-produto p { height: auto; overflow: visible; font-size: 1rem; }
+.aviso-adicionais { font-size: .875rem !important; color: #555 !important; }
+.opcoes-adicionais label { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: .875rem; }
+.opcoes-adicionais input { width: 18px; height: 18px; flex-shrink: 0; }
+.opcoes-adicionais label:has(input:disabled) { opacity: .65; cursor: default; }
+section[id], footer[id] { scroll-margin-top: 120px; }
+.grid-produtos { grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); }
+.hero { height: auto; min-height: 55vh; padding: 60px 20px; }
+:focus-visible { outline: 3px solid #d58700; outline-offset: 4px; }
+dialog { border: 0; border-radius: 16px; padding: 24px; max-width: 520px; width: calc(100% - 32px); margin: auto; }
+dialog::backdrop { background: #230324aa; }
+dialog h2 { color: #5e035f; margin-bottom: 16px; }
+#texto-resumo { white-space: pre-line; margin-bottom: 16px; }
+.acoes-resumo { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 16px; }
+.acoes-resumo .btn-pedir-copo { margin: 0; }
+#editar-pedido { font: inherit; padding: 10px 16px; cursor: pointer; border-radius: 22px; border: 1px solid #5e035f; background: white; color: #5e035f; }
+.sem-js { padding: 20px; text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }

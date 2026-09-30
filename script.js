@@ -82,23 +82,31 @@ document.addEventListener('DOMContentLoaded', () => {
         opcao.disabled = limiteAtingido && !opcao.checked;
       });
 
-      aviso.textContent = `${selecionadas} de ${limite} adicional${limite > 1 ? 'is' : ''} selecionado${selecionadas === 1 ? '' : 's'}.`;
+      aviso.textContent = `${selecionadas} de ${limite} adicionais selecionados.${limiteAtingido ? ' Limite atingido. Desmarque uma opção para trocar.' : ''}`;
     };
 
     opcoes.forEach((opcao) => opcao.addEventListener('change', atualizarOpcoes));
     atualizarOpcoes();
   });
 
-  document.querySelectorAll('.btn-pedir-copo').forEach((botao) => {
+  document.querySelector('#editar-pedido').addEventListener('click', () => document.querySelector('#resumo-pedido').close());
+  document.querySelectorAll('button.btn-pedir-copo').forEach((botao) => {
     botao.addEventListener('click', () => {
       const card = botao.closest('.card-produto');
       const seletor = card.querySelector('.adicionais');
       const adicionais = [...seletor.querySelectorAll('input:checked')]
         .map((opcao) => opcao.value)
         .join(', ') || 'sem adicionais';
-      const mensagem = `Olá! Quero pedir: ${seletor.dataset.copo}. Adicionais: ${adicionais}.`;
-
-      window.open(`https://wa.me/5551989639547?text=${encodeURIComponent(mensagem)}`, '_blank', 'noopener');
+      const quantidade = seletor.querySelectorAll('input:checked').length;
+      if (quantidade > Number(seletor.dataset.limite)) {
+        seletor.querySelector('.aviso-adicionais').textContent = 'Reduza os adicionais ao limite do copo.';
+        return;
+      }
+      const preco = card.querySelector('.preco').textContent.trim();
+      const mensagem = `Olá! Quero pedir:\n${seletor.dataset.copo}\nAdicionais: ${adicionais}\nValor do copo: ${preco}\nPode confirmar disponibilidade, entrega e pagamento?`;
+      document.querySelector('#texto-resumo').textContent = `${seletor.dataset.copo}\nAdicionais: ${adicionais}\nValor do copo: ${preco}`;
+      document.querySelector('#enviar-pedido').href = `https://wa.me/5551989639547?text=${encodeURIComponent(mensagem)}`;
+      document.querySelector('#resumo-pedido').showModal();
     });
   });
 });
